@@ -1,0 +1,78 @@
+
+     
+      
+    
+
+
+     <div class = "row">
+         <div class ="col-md-2">
+             <div class = "row">
+                 <div class ="col">
+             <div class = "container-fluid">
+              <div class  = "row">
+                <div class ="col-12" style ="margin-left : 0px;  padding : 0px;">        
+                    
+          <a href ="/editprofileimg"><img class="img-thumbnail" style = "height : 200px; width : 200px; margin-left:0px; padding : 0px;"src ="{{profileimg.imageUrl}}"></a>
+        
+        </div>
+       
+
+        </div>
+          </div>
+          </div>
+         </div>
+         <div class ="row">
+             <div class ="col">
+              <table class = "table table-bordered">
+                  <tr scope = 'row'>
+                      <th><a href ="profilepage" style ="color: white">Dashboard</a></th>
+                      </tr>
+                       <tr scope = 'row'>
+                      <th><a href ="/userdata/viewprofile" style = "color : white">About you</a></th>
+                      </tr>
+                       <tr scope = 'row'>
+                      <th><a href ="userpost" style = "color : white">Posts</a></th> </tr>
+                       <tr scope = 'row'>
+                      <th><a href ="timeline" style = "color : white" >Timeline</a></th>
+                  </tr>
+                    <tr scope = 'row'>
+                      <th><a href ="doubts" style = "color : white" >Questions</a></th>
+                  </tr>
+                    <tr scope = 'row'>
+                      <th><a href ="projectlist" style = "color : white" >Projects</a></th>
+                  </tr>
+              </table>
+             </div>
+         </div>
+         </div>
+        
+         <div class ="col-md-8">
+                <h1 id ="username" style ="border-bottom : 1px solid #bbb">{{username}}</h1>  
+
+                <div class ="row">
+                    <div class ="col">
+                        <div id ="label"></div>
+                        <canvas id ="myChart" ></canvas>
+                    </div>
+                </div> 
+         </div>
+         <div class = "col-md-2"  id ="leaderboard">
+           
+              
+                 
+      
+                  <nav>
+                      <h2>Leaderboard</h2>
+                <ul>
+               {{# each user}}
+                
+                   <li>{{this.username}}</li>
+                 
+                   {{/each}} 
+            </ul>
+            </nav>
+             </div>
+        
+        
+     </div>
+ 

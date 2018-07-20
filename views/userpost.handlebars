@@ -1,0 +1,43 @@
+<div class ="container">
+  <div class= "row mt-2">
+    <div class ="col">
+        {{#if errors}}
+            {{#each errors}}
+              <div class ="alert alert-danger">{{msg}}</div>
+              {{/each}}
+        {{/if}}
+          <form action ="/userpost/status" method ="POST">
+<div class="form-group" id ="statusarea">
+    <label for="exampleFormControlTextarea1">What's Up Share with us.</label>
+    <textarea class="form-control"  name ="content"></textarea>
+  </div>
+   <button class ="btn btn-warning" type="submit">Submit</button>
+</form> 
+  
+   
+       
+    </div> 
+    <div class = 'col'> 
+      <form action ="userpost/uploads" method="POST" enctype="multipart/form-data">
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Upload</span>
+  </div>
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" name ="UserImage" id="inputGroupFile01">
+    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+  </div>
+</div>
+
+     
+      <div class="form-group" id ="statusarea">
+    <label for="exampleFormControlTextarea1">Share a Caption</label>
+    <textarea class="form-control"  name ="caption"></textarea>
+  </div>
+ <button  class ="btn btn-warning" type="submit">Submit</button>
+  </div>
+</form>
+  
+    </div>
+  </div>
+</div>

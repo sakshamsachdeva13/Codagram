@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+          <img class ="img-thumbnail" style = "height : 200px; width : 200px; margin-left:0px; padding : 0px;" src ='{{profileimg.profileimg.imageUrl}}'>
+          
+        </div>
+        <div class ="col">
+            <Form action ="/editprofileimg?_method=PUT" , method ="post" enctype="multipart/form-data">
+               <input type="file" name="image" id="">
+               <button type="submit" class ="btn btn-warning">Submit</button>
+            </Form>
+        </div>
+    </div>
+</div>

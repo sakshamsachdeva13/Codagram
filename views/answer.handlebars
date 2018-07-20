@@ -1,0 +1,26 @@
+<div = "container"> 
+      {{#if errors}}
+            {{#each errors}}
+              <div class ="alert alert-danger">{{msg}}</div>
+              {{/each}}
+        {{/if}}
+    <div class ="row mt-5">
+        <div class ="col md-3">
+            <ul>
+           {{# each item}}
+             <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span style = "font-family : Oswald ; font-size : 20px; color:black;">{{this.ans}}</span>
+                 
+                  </li>
+            {{/each}}
+             
+        </div>
+        <div class="col md-8">
+
+            <form action ="/doubts/{{quid}}" method ="POST">
+            <textarea class="form-control" name ="answer"></textarea>
+            <button  class ="btn btn-warning">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

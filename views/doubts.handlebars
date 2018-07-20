@@ -1,0 +1,28 @@
+<div class ="container">
+      {{#if errors}}
+            {{#each errors}}
+              <div class ="alert alert-danger">{{msg}}</div>
+              {{/each}}
+        {{/if}}
+    <div class ="row">
+        <div class ="col md-9">
+            <div >Can you Suggest something</div>
+            <ul class ="list-group list-group-flush">
+                {{# each items}}
+                       <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <a href ="/doubts/{{this.id}}" style = "font-family : Oswald ; font-size : 20px; color:black;">{{this.dou}}</a>
+                 
+                  </li>
+                       {{/each}}
+            </ul>
+        </div>
+        <div class ="col">
+            <form action ="/doubts" method ="POST">
+            <textarea class ="form-control" name ="dou"></textarea>
+            <button type ="submit" class ="btn btn-warning">
+                Submit
+            </button>
+            </form>
+        </div>
+    </div>
+</div>

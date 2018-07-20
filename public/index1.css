@@ -1,0 +1,96 @@
+  
+ 
+  body {
+
+    overflow-x :hidden;
+    
+
+  }
+  #header {
+    background-color: #404dca;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+    margin-bottom: px;
+    border-bottom : 0.3px solid #fff
+
+  }
+  
+
+   
+           #box 
+                 {
+                     width : 500px;
+                     height :  450px;
+                     margin-left: 0px;
+                     margin-right : 50px;
+                 }
+
+                 #box1 {
+                     height : 700px;
+                     margin-right : 0px;
+                    
+                 }
+
+                 #img {
+
+                    height : 400px;
+                 }
+
+                 #frame {
+                     height : 200px;
+                     height : 400px;
+                 }
+                 #inputlg {
+                
+                    height : 100px;
+                    visibility : hidden;
+                 }
+
+                 #status {
+                     width : 200px;
+                     height : 150px;
+                 }
+                 #status1 {
+                     width : 500px;
+                 } 
+                 #input-event {
+
+                  
+                   
+                    position:fixed;
+                     
+                  
+                    z-index:100;
+                    margin-bottom: px;
+                    visibility : hidden;
+
+                 }
+                 #btn {
+                    position:fixed;
+                     
+                  
+                    z-index:100;
+                    margin-bottom: px;
+                 }
+                 #right-col {
+                    
+                    position:fixed;
+    top:0;
+    
+    z-index:100;
+    margin-bottom: px;
+    margin-left : 850px;
+    margin-top : 100px;
+
+                 }
+                 #logo {
+
+                    margin-top: 100px;
+                 }
+
+                 #login-box {
+
+                    margintop : 100px;
+                 }

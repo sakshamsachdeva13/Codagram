@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+         {{#if errors}}
+            {{#each errors}}
+              <div class ="alert alert-danger">{{msg}}</div>
+              {{/each}}
+        {{/if}}
+        <div class="col">
+            <ul>
+            {{# each item}}
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <a href ="{{this.projectlink}}" style = "font-family : Oswald ; font-size : 20px; color:black;">{{this.projectname}}</a>
+                  <form action ='/projectlist/{{this.userid}}' method ="post">
+                     <input class ="form-control"type="number" style ='width : 80px;' name="rating" id="">
+                     <button type ="submit" class ="btn btn-warning">Submit</button>
+                     </form>
+                  </li>
+                
+
+                {{/each}}
+            </ul>
+        </div>
+          <div class="col">
+              <form action="/projectlist" method="post">
+                <div class ="form-group">
+            <label class="col-lg-3 control-label" name ="name">Project Name</label>
+            <input class ="form-control" type ="text" name ="name"  placeholder ="Project name"><br>
+            </div>
+               <div class ="form-group">
+            <label class="col-lg-3 control-label" name ="name">project Link</label>
+            <input class ="form-control" type ="text" name ="link" placeholder ="Project link"><br>
+            </div>
+                <button type="submit" class ="btn btn-warning">Submit</button>
+              </form>
+          </div>
+    </div>
+</div>

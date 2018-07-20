@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+     <link rel = "stylesheet" type='text/css'  href ="../../css/{{stylesheets}}" > 
+    
+    </head>
+
+
+<body> 
+
+
+      <div class = "container-fluid">
+           <div class = "row " id ="header"  style="background-color: rgba(255,8,83,0.8) ; border-bottom : 1px solid #bbb;">
+            <div class = "col md-12 " styles ="margin-left : 0;"> 
+   <!-- Image and text --> 
+   
+  <nav  class="navbar navbar-light" >
+      
+      <a class="navbar-brand" href="/profilepage">
+           <h1 style = "font-family : Oswald ; font-size : 40px; color:white;"> <i class="fas fa-code"></i>Codagram</h1>
+      </a>  
+      
+     {{#if  currentUser}}
+      <li class ="nav-item-right" style ="list-style : none">
+               <a class ="nav-link" href="/signin/logout" style = " font-size : 20px; color:white;">logout</a>
+    </li>
+   
+  <li class ="nav-item" style ="list-style: none">      
+               <a class ="nav-link" href="/userdata/edit" style = " font-size : 20px; color:white;">Edit Profile</a>
+      </li>
+      
+  <li class ="nav-item" style ="list-style: none">      
+               <a class ="nav-link" href="/userpost/uploads" style = " font-size : 20px; color:white;">My Posts</a>
+      </li>
+       {{/if}}
+       
+      
+           </div>
+           </div>
+        </div>
+    {{{body}}}
+</body>
+ <script src ="../../js/{{script}}"></script>
+</html>

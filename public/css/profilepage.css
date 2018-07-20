@@ -1,0 +1,48 @@
+body {
+    overflow-x : hidden;
+    background-color : rgba(39 , 26 , 53 );
+   
+}
+canvas{
+
+    width:600px !important;
+    height:450px !important;
+  
+  }
+#btn   {
+     position: absolute;
+top: 88%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+width: 200px;
+color: white;
+font-size: 16px;
+font-weight : 800;
+font-family: 'Courier New', Courier, monospace;
+padding: 12px 24px;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+text-align: center;
+}
+th {
+    color: white;
+}
+nav ul{height:340px; width:100%;}
+nav ul{overflow:hidden; overflow-y:scroll; }
+ul {padding: 0px;margin-right : 0;}
+ #leaderboard {
+     margin-top : 9px;
+
+ }
+li { color : white; 
+text-align : left;
+  }
+
+h1,h3,h4,h2 {
+    color: white ;
+}
+h3 , h2{
+    border-bottom : 1px solid #bbb;
+}

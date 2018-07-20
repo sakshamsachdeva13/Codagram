@@ -1,0 +1,48 @@
+
+
+  .form-control {
+
+    background-color : transparent ;
+    border : none ;
+    border-bottom :   0.8px solid #fff;
+  }
+
+   .panel-default {
+    opacity: 0.9;
+    margin-top:40px;
+    margin-left:30px;
+   }
+   .form-group.last {
+    margin-bottom:0px;
+   }
+    #login-box {
+        margin-top : 0px;
+        margin-left : 500px;
+        background-color : rgb(0, 0, 0 , 0.5) ;
+        
+        height : 400px;
+         
+    
+        
+    }
+    #header {
+        
+    border-bottom:   0.3px solid #ccccb3;
+    }
+    body {
+        background-image:    url(image3.jpg);
+        background-size:     cover;                      /* <------ */
+        background-repeat:   no-repeat;
+        background-position: center center;              /* optional, center the image */
+    }
+    
+    
+    #logo {
+        margin-left : 500px;
+
+        margin-top : 40px;
+    }
+
+ label {
+    color : white;
+}

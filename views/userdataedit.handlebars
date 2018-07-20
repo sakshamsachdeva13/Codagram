@@ -1,0 +1,65 @@
+
+
+<div class="container">
+    <h1>Edit profile</h1>
+    <hr>
+  <div class="row">
+    <div class="col-md-3">
+     
+    </div>
+    <div class="col md-9 ">
+       {{#if errors}}
+            {{#each errors}}
+              <div class ="alert alert-danger">{{msg}}</div>
+              {{/each}}
+        {{/if}}
+      <h3>personal info</h3>
+      
+      {{# each item}}
+      <form action="/userdata/edit" method="post"  enctype="multipart/form-data">
+     
+          <div class ="form-group">
+            <label class="col-lg-3 control-label" name ="name">Name:</label>
+            <input class ="form-control" type ="text" name ="name" value ="{{this.name}}" placeholder ="name"><br>
+            </div>
+            
+
+           <div class="form-group">
+            <label class="col-lg-3 control-label" name ="name">Gender:</label>
+            <input class ="form-control" type ="text" name ="gender" value ="{{this.gender}}" placeholder ="name"><br>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-3 control-label" name ="name">College:</label>
+            <input class ="form-control" type ="text" name ="college" value ="{{this.college_name}}" placeholder ="name"><br>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-3 control-label" name ="name">Email:</label>
+            <input class ="form-control" type ="text" name ="email" value ="{{this.email}}" placeholder ="name"><br>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-3 control-label" name ="name">Country:</label>
+            <input class ="form-control" type ="text" name ="country"value ="{{this.country}}" placeholder ="name"><br>
+            </div>
+            <div class ="form-group">
+              <label class="col-lg-3 control-label" name ="name">Username:</label>
+            <input  class ="form-control" type ="text" name ="username" value ="{{this.username}}" placeholder ="name"><br>
+            </div>
+             <div class ="form-group">
+              <label class="col-lg-3 control-label" name ="Age">Age:</label>
+            <input  class ="form-control" type ="text" name ="age" value ="{{this.age}}" placeholder ="name"><br>
+            </div>
+
+
+
+              <div class ="form-group">
+            <button type="submit" class ="btn btn-success">Submit</button>
+            </div>
+             </form>
+
+            {{/each}}
+          
+
+                
+    </div>
+  </div>
+</div>

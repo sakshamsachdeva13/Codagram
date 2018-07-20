@@ -1,0 +1,20 @@
+body {
+    color : white ;
+    background-color: rgb(39 , 26 , 53)
+}
+textarea {
+
+   
+    height : 100px;
+    width : 50px;
+} 
+
+#statusarea {
+
+   padding-right : 25%;
+}  
+
+img {
+    width : 50px;
+    height : 70px;
+}

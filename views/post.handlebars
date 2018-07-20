@@ -1,0 +1,30 @@
+<div class ="container"> 
+
+        
+<div class="row text-left" style="display:flex; flex-wrap: wrap;">
+{{# each image}}
+
+            <div class="col-md-3 col-sm-6" id ="post">
+                
+           <div class="thumbnail">
+           <img id ="image" src="{{this.UserImage.imageUrl}}">
+           </div>
+           <div class="caption">
+            <p><h6>caption:</h6>{{caption}}</p>
+            <p>updated by {{username}}</p> 
+               </div>
+               <div class="container-fluid">
+                    <form action="/userpost/{{this._id}}?_method=DELETE" method="post">
+                   <button class ="btn btn-danger" type="submit">Delete</button>
+
+                   </form>
+               </div>
+           </div>
+        {{/each}}
+    
+    </div>
+</div>
+
+        
+    
+
