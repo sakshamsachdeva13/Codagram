@@ -65,7 +65,7 @@ var storage = multer.diskStorage({
         username : req.user.username
         
     }) 
-    image.save().then(result=> {console.log(result)
+    image.save().then(result=> {
         res.redirect('/timeline')
     }).catch(err=>{
         console.log(err)
@@ -97,7 +97,7 @@ var storage = multer.diskStorage({
         status.save()
         .then((result)=> {
            
-            console.log(result)
+        
             res.redirect('/profilepage')
             
         }).catch(err => console.log(err))
@@ -106,7 +106,7 @@ var storage = multer.diskStorage({
 
     route.delete('/:id' , middleware.isloggedin , (req , res)=> {
         Image.findById(req.params.id).then(result => {
-                  console.log(result)
+            
             cloudinary.uploader.destroy(result.UserImage.imageid).then(() => {
                    result.remove().then(() => {
                        console.log('image has been succesfully deleted')
@@ -123,7 +123,7 @@ var storage = multer.diskStorage({
   // GETTING IMAGES FROM DATABASE
    route.get('/uploads' , middleware.isloggedin , (req , res , next)=> {
        Image.find({userid : req.user.id}).exec().then(doc => {
-                    console.log(doc)
+                
              res.render('post' , {image : doc , stylesheets : "postview.css" , username : req.user})
        })
    })

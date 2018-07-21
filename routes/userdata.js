@@ -47,19 +47,26 @@ route.get('/' , middleware.isloggedin ,  (req , res , next)=> {
 
 
 route.post('/edit' , middleware.isloggedin  , (req , res , next)=> {
-    
+      const name = req.body.name ;
+      const gender = req.body.gender ;
+      const college_name = req.body.college ;
+      const age = req.body.age ;
+      const country = req.body.country ;
+      const username = req.body.username ;
+      const email = req.body.email ;
+      
     userdata.findOneAndUpdate({userid : req.user.id} ,
-    {$set : {name : req.body.name , 
-             gender : req.body.gender , 
-             college_name : req.body.college , 
-             age : req.body.age , 
-             email : req.body.email ,
-             country : req.body.country , 
+    {$set : {name : name  , 
+             gender : gender  , 
+             college_name : college_name , 
+             age : age , 
+             email : email ,
+             country : country , 
             
-             username : req.body.username
+             username : username
     }}
     ).then(result => {
-        console.log(result)
+        
         res.redirect('/profilepage')
     }).catch(err => {
         console.log(err)
@@ -97,7 +104,7 @@ route.post('/' , middleware.isloggedin ,upload.single('profileimage'), (req, res
 
    else {  
     cloudinary.uploader.upload(req.file.path).then(result => {
-              console.log(result)
+              
         userdata.findOne({username : username} , (err , user)=> {
             if(user) {
                 res.render('usedata' , {user : user})
@@ -120,7 +127,7 @@ route.post('/' , middleware.isloggedin ,upload.single('profileimage'), (req, res
             }   , 
             username : username
      }).save().then((result) => {
-         console.log(result)
+         
          
          res.redirect('/profilepage')
           
@@ -140,7 +147,7 @@ route.post('/' , middleware.isloggedin ,upload.single('profileimage'), (req, res
         
      userdata.find({userid : req.user.id}).exec()
      .then(docs => {
-        console.log(docs)
+        
        res.render('viewprofile' , {item : docs } )
      })
      .catch(err => {
