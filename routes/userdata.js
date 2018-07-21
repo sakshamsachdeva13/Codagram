@@ -22,8 +22,8 @@ var storage = multer.diskStorage({
   
   cloudinary.config({ 
     cloud_name: 'codagram', 
-    api_key: '871722275327292', 
-    api_secret:  'z5Xgpb2Vv5T6FNx4eEsLniwB_hI' 
+    api_key: process.env.CLOUDINARY_APIKEY, 
+    api_secret: process.env.CLOUDINARY_SECRET 
   });
         
   
