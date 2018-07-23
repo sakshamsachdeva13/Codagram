@@ -6,6 +6,7 @@ const exphbs = require('express-handlebars')
 const localstrategy = require('passport-local')
 const passport = require('passport')
 const mongoose = require('mongoose')
+const sslredirect = require('heroku-ssl-redirect')
 const flash = require('connect-flash')
 const bodyparser = require('body-parser')
 const expressValidator = require('express-validator')
@@ -18,7 +19,7 @@ app.use(methodOverride('_method'));
 //PARSING BODY AND URL
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended: true}))
-
+app.use(sslredirect())
 
 
 
