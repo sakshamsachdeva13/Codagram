@@ -80,7 +80,7 @@ myChart.canvas.width = 50
           display:true,
           position:'right',
           labels:{
-            fontColor:'#000'
+            fontColor:'#111'
           }
         },
         layout:{
