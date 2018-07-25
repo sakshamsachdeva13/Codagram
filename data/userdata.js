@@ -24,12 +24,14 @@ const  Userdata = new Schema({
                   
                 teacherid : {type : mongoose.Schema.Types.ObjectId} , 
 
-                rating : Number 
-         }] , 
+                rating : Number , 
+               
+         }] ,
          projectrating : [{
                 studentid : {type : mongoose.Schema.Types.ObjectId} , 
 
-                studentrating : Number
+                studentrating : Number , 
+
          }] , 
 
          sempercentage : {

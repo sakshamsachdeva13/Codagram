@@ -107,6 +107,6 @@ mongoose.connect('mongodb://saksham:sak123@ds235181.mlab.com:35181/imageuploadin
 
 
 //PORT...
-app.listen(process.env.PORT , process.env.IP , () => {
+app.listen(9000 ,  () => {
     console.log('Codagram has been started')
 }) 

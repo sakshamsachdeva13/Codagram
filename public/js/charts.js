@@ -1,7 +1,7 @@
 
 
 
-fetch('https://secure-sierra-40015.herokuapp.com/profilepage/user')
+fetch('http://localhost:9000/profilepage/user')
 .then(res => res.json())
 .then(data => {
   console.log(data.data)
@@ -17,14 +17,7 @@ fetch('https://secure-sierra-40015.herokuapp.com/profilepage/user')
         break;
       }
     }
-    if(user.teacherrating.length=== 0 && user.percentage === 0 && user.projectrating.length === 0) {
-
-      let label = document.createElement("h1")
-      label.innerHTML ="your data is not sufficient to show your performance raise your graph as much as possible"
-       let doc = document.getElementById('label')
-       doc.appendChild(label)
-       console.log(doc)
-    } else {
+   
    console.log(user)
      let teacher_rating_percentage = 0
     
@@ -34,10 +27,17 @@ fetch('https://secure-sierra-40015.herokuapp.com/profilepage/user')
      sum = sum + user.teacherrating[i].rating
 
    } 
-    teacher_rating_percentage = sum*10 ; //teacherrating that to be shown
+    teacher_rating_percentage = (sum/(5*user.teacherrating.length))*100 ; //teacherrating that to be shown
+
+   let projectsum = 0;
+    for(var i =0 ; i<user.projectrating.length ; i++)
+    {
+      projectsum = projectsum+ user.projectrating[i].studentrating ;
+    }
       
-   
+     let project_rating_percent = (projectsum/(5*user.projectrating.length))*100;
      
+     console.log(project_rating_percent)
 let myChart = document.getElementById('myChart').getContext('2d');
 myChart.canvas.height = 40
 myChart.canvas.width = 50
@@ -49,17 +49,14 @@ myChart.canvas.width = 50
     let massPopChart = new Chart(myChart, {
       type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
-        labels:['teacherrating', 'semmarks', 'project rating'],
+        labels:['Teacher Rating', 'Semester Marks', 'Project Rating'],
         datasets:[{
           label : [''],
-          data:[ 
-           teacher_rating_percentage,
-           
-           user.sempercentage.percentage,
-           87 ,
+          data:[  teacher_rating_percentage , user.sempercentage.percentage, project_rating_percent ,] ,
+             
             
-           
-          ],
+          
+         
           //backgroundColor:'green',
           backgroundColor:[
             '#59253a',
@@ -100,7 +97,7 @@ myChart.canvas.width = 50
       }
     }); 
 
-  }    
+     
 }).catch((err) => {
   console.log(err)
 })   
