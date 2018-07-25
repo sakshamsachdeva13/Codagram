@@ -1,7 +1,7 @@
 
 
 
-fetch('http://localhost:9000/profilepage/user')
+fetch('https://secure-sierra-40015.herokuapp.com/profilepage/user')
 .then(res => res.json())
 .then(data => {
   console.log(data.data)
